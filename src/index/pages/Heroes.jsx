@@ -1,12 +1,11 @@
 
 import HeroList from '../components/HeroList';
 
-const Home = () => {
+const Heroes = () => {
     return (
-        <>
-            <HeroList />
-        </>
+         <HeroList />
+    
     );
 };
 
-export default Home;
+export default Heroes;

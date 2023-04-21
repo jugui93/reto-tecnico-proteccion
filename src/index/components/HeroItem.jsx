@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../styles/productItem.css';
-// import AppContext from '../context/AppContext'
-// import addToCartImage from '@icons/bt_add_to_cart.svg';
 
-const HeroItem = ({ hero }) => {
+
+const HeroItem = ({ superheroId }) => {
 	
+    const [superheroData, setSuperheroData] = useState([]);
+    const [showImage, setShowImage] = useState(true)
+
+    const API = 'https://superheroapi.com/api/10230158846056302/';
+    
+    useEffect( () => {
+        fetch( API+superheroId )
+          .then((data) => data.json())
+          .then((res) => {
+            console.log(res)
+            setSuperheroData(res)})
+          .catch((err) => console.log(err))
+    }, [])
+
+    const showImageHandler = () => {
+        setShowImage(!showImage);
+    }
+
 	return (
-		<div className="ProductItem">
-			<img src={hero.image.url} alt={hero.title} />
-			<div className="product-info">
+		<div className="ProductItem" onClick={showImageHandler}>
+            {showImage && <img src={superheroData.image?.url} alt={superheroData.name} />}
+			{!showImage && <div className="product-info">
 				<div>
-					<p>{hero.name}</p>
-					<p>{hero.powerstats.intelligence}</p>
+                    <h2>Nombre:</h2>
+					<p>{superheroData.name}</p>
+                    <h2>Genero:</h2>
+					<p>{superheroData.appearance?.gender}</p>
+                    <h2>Raza:</h2>
+					<p>{superheroData.appearance?.race}</p>
 				</div>
 				
-			</div>
+			</div>}
 		</div>
 	);
 }

@@ -1,10 +1,14 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
 
 import Heroes from './index/pages/Heroes';
 
+
 function App() {
   return (
+  <>
+    <h1>SuperHero App</h1>
     <Heroes />
+  </>
   );
 }
 
