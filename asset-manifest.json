@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/reto-tecnico-proteccion/static/css/main.82ff4999.css",
+    "main.js": "/reto-tecnico-proteccion/static/js/main.8c25065c.js",
+    "static/js/787.d9fcd1d4.chunk.js": "/reto-tecnico-proteccion/static/js/787.d9fcd1d4.chunk.js",
+    "index.html": "/reto-tecnico-proteccion/index.html",
+    "main.82ff4999.css.map": "/reto-tecnico-proteccion/static/css/main.82ff4999.css.map",
+    "main.8c25065c.js.map": "/reto-tecnico-proteccion/static/js/main.8c25065c.js.map",
+    "787.d9fcd1d4.chunk.js.map": "/reto-tecnico-proteccion/static/js/787.d9fcd1d4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82ff4999.css",
+    "static/js/main.8c25065c.js"
+  ]
+}
