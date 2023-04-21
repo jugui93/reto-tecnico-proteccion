@@ -13,10 +13,9 @@ const HeroItem = ({ superheroId }) => {
         fetch( API+superheroId )
           .then((data) => data.json())
           .then((res) => {
-            console.log(res)
             setSuperheroData(res)})
           .catch((err) => console.log(err))
-    }, [])
+    }, [superheroId])
 
     const showImageHandler = () => {
         setShowImage(!showImage);
