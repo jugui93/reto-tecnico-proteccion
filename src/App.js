@@ -1,10 +1,10 @@
-import { Router } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Heroes from './index/pages/Heroes';
 
 function App() {
   return (
-    <Router >
-      <Route path='/' element={<HeroList />} exact />
-    </Router>
+    <Heroes />
   );
 }
 

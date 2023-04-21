@@ -1,5 +1,5 @@
 
-import ProductList from '../containers/ProductList';
+import HeroList from '../components/HeroList';
 
 const Home = () => {
     return (
