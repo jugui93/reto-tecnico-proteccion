@@ -16,7 +16,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build -r https://$GH_TOKEN@github.com/jugui93/reto-tecnico-proteccion"
   },
   "eslintConfig": {
     "extends": [
@@ -24,7 +26,8 @@
       "react-app/jest"
     ]
   },
-  "proxy":"https://www.superheroapi.com/api",
+  "proxy": "https://www.superheroapi.com/api",
+  "homepage":"https://jugui93.github.io/reto-tecnico-proteccion",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -36,5 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
